@@ -20,11 +20,8 @@ app.use(cors(corsOptions))
 
 // Api Route
 
-app.use("/api/v1/koinx", MainRoute)
+app.use("/", MainRoute)
 
-app.get("/", (request, response)=>{
-    response.status(200).send("APi is working fine")
-})
 
 app.use(Errorhandler)
 // for middleware error handling

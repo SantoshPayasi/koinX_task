@@ -1,4 +1,3 @@
-import ResponseHandler from "./responseHandler.utils.js";
 import statusCodeUtility from "./statuscode.utils.js";
 
 function Errorhandler(error, request, response, next){

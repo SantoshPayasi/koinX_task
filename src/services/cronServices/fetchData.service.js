@@ -3,9 +3,9 @@ import fetch from "node-fetch"
 import {envProvider} from "../../constants.js"
 import coinModels from "../../models/coin.models.js";
 
-const backgroundTask =  cron.schedule('*/30 * * * * *', async () => {
+const backgroundTask =  cron.schedule('0 */2 * * *', async () => {
       try {
-            console.log(envProvider.API_KEY)
+
             const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,matic-network,ethereum&vs_currencies=USD&include_market_cap=true&include_24hr_change=true';
             const options = {
               method: 'GET',
@@ -13,7 +13,7 @@ const backgroundTask =  cron.schedule('*/30 * * * * *', async () => {
             };
 
             const coinData = await fetch(url, options)
-            console.log(coinData.status)
+
             if(!coinData || !coinData.status===200){
               console.log("unable to fetch data")
             }
