@@ -1,6 +1,6 @@
 import cron from "node-cron"
 import fetch from "node-fetch"
-import {envProvider} from "../constants.js"
+import {envProvider} from "../../constants.js"
 import coinModels from "../models/coin.models.js";
 
 const backgroundTask =  cron.schedule('*/30 * * * * *', async () => {
