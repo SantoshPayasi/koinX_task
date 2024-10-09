@@ -6,7 +6,7 @@ import coinrequestverifierMiddleware from "../middleware/coinrequestverifier.mid
 const router = express.Router()
 
 router.get("/test", (request, response)=>{
-    return response.this.status(200).json({
+    return response.status(200).json({
         message:"API routes is working file"
     })
 })
