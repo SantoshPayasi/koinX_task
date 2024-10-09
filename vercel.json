@@ -12,7 +12,7 @@
         "dest": "/index.js"
       },
       {
-        "src": "/api/v1/(.*)",  
+        "src": "/api/v1/koinx/(.*)",  
         "dest": "/index.js"  
       }
     ]
